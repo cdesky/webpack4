@@ -36,11 +36,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.css|.less$/,
-          use: [
-            devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-            "css-loader",
-            "less-loader"
-          ]
+          use: ["style-loader", "css-loader", "less-loader"]
         },
         {
           test: /\.(png|svg|jpg|gif|jpeg)$/i,
